@@ -1,0 +1,72 @@
+header{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #023E8A;
+  z-index: 1;
+
+}
+.titulo-cabecera{
+  text-align: center;
+  color: white;
+  margin-top: 18px;
+  font-size: 1.5em;
+}
+.separacion-header{
+
+  margin-top:50px;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  background-color:#48CAE4 ;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size:1em ;
+  width: auto;
+  box-shadow: 1px 1px 5px #023E8A;
+
+  .campo {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+
+h3{
+
+  color: #023E8A;
+}
+input,select{
+
+  border-radius: 3px;
+  border: none;
+  float: right;
+  text-align: right;
+  color:#023E8A;
+}
+select{
+  margin-top: 2px;
+}
+label{
+  padding-bottom: 3px;
+}
+button {
+  position: relative;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  background-color: #0096C7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #023E8A;
+
+}

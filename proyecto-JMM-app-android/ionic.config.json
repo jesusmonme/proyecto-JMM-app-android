@@ -1,0 +1,8 @@
+{
+  "name": "Basket organizer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "26ae4489"
+}

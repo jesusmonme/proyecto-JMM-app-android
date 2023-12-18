@@ -1,0 +1,161 @@
+<header>
+  <div class="titulo-cabecera">Editar Peña {{penya.nombreBD}}</div>
+</header>
+<div class="separacion-header">
+  <form (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend><h3>Datos Generales</h3></legend>
+      <div class="campo">
+        <label for="nombre">Nombre de la Peña:</label>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Nombre"
+          [(ngModel)]="penya.nombreBD"
+          required="true"
+        />
+      </div>
+
+      <br />
+      <div class="campo">
+        <label for="nombreBD">Nombre en la Base de Datos:</label>
+        <input
+          type="text"
+          name="nombreBD"
+          id="nombreBD"
+          placeholder="NombreBD"
+          [(ngModel)]="penya.nombreBD"
+          required="true"
+          disabled="true"
+        />
+      </div>
+      <br />
+      <div class="campo">
+        <label for="cuota">Cuota miembro:</label>
+        <input
+          type="number"
+          name="cuota"
+          id="cuota"
+          placeholder="0.00"
+          step="any"
+          [(ngModel)]="penya.cuota"
+        />
+      </div>
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend><h3>Reparto puntos</h3></legend>
+      <div class="campo">
+        <label for="victoria">Puntos por victoria</label>
+        <input
+          type="number"
+          name="victoria"
+          id="victoria"
+          [(ngModel)]="penya.puntosVictoria"
+        />
+      </div>
+      <br />
+      <div class="campo">
+        <label for="empate">Puntos por empate</label>
+        <input
+          type="number"
+          name="empate"
+          id="empate"
+          [(ngModel)]="penya.puntosEmpate"
+        />
+      </div>
+      <br />
+      <div class="campo">
+        <label for="derrota">Puntos por derrota</label>
+        <input
+          type="number"
+          name="derrota"
+          id="derrota"
+          [(ngModel)]="penya.puntosDerrota"
+        />
+      </div>
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend><h3>Parametros de sorteo</h3></legend>
+      <div class="campo">
+        <label>Sorteo basado en:</label>
+        <select name="sorteo" id="sorteo" [(ngModel)]="penya.sorteo">
+          <!-- TODO ver valores select si poner a numerico -->
+          <option value="vic-der">Ratio Victorias/Derrotas</option>
+          <option value="clasificacion">Clasificacion en la peña</option>
+          <option value="sin-estadisticas">Sin atender estadísticas</option>
+          <option value="aleatorio">Completamente aleatorio</option>
+          <option value="preguntar">Preguntar siempre</option>
+        </select>
+      </div>
+      <br />
+      <div class="campo">
+        <label>Equilibrar niveles</label>
+        <input
+          type="checkbox"
+          name="equilibrarNiveles"
+          [(ngModel)]="penya.equilibrarNiveles"
+        />
+      </div>
+      <br />
+      <div class="campo">
+        <label>Equilibrar posiciones</label>
+        <input
+          type="checkbox"
+          name="equilibrarPosiciones"
+          [(ngModel)]="penya.equilibrarPosiciones"
+        />
+      </div>
+      <br />
+      <div class="campo">
+        <label>Considerar incompatibilidades</label>
+        <input
+          type="checkbox"
+          name="considerarIncompatibilidades"
+          [(ngModel)]="penya.considerarIncompatibilidades"
+        />
+      </div>
+      <br />
+    </fieldset>
+    <fieldset>
+      <legend><h3>Nombres de Equipos</h3></legend>
+      <div class="campo">
+        <label for="nombreEquipo1">Equipo 1:</label>
+        <!-- TODO ver tema nombre equipos -->
+        <input
+          type="text"
+          name="nombreEquipo1"
+          id="nombreEquipo1"
+          placeholder="Equipo1..."
+          [(ngModel)]="penya.equipo1"
+        />
+      </div>
+      <br />
+      <div class="campo">
+        <label for="nombreEquipo2">Equipo 2:</label>
+        <input
+          type="text"
+          name="nombreEquipo2"
+          id="nombreEquipo2"
+          placeholder="Equipo2..."
+          [(ngModel)]="penya.equipo2"
+        />
+      </div>
+      <br />
+      <!-- <label for="nombreEquipo3">Equipo 3:</label>
+          <input type="text" name="nombreEquipo3" id="nombreEquipo3" placeholder="Equipo3..."[(ngModel)]="nombreEquipo3" >
+          <br>
+          <label for="nombreEquipo4">Equipo 4:</label>
+          <input type="text" name="nombreEquipo4" id="nombreEquipo4" placeholder="Equipo4..."[(ngModel)]="nombreEquipo4" >
+          <br>
+          <label for="nombreEquipo5">Equipo 5:</label>
+          <input type="text" name="nombreEquipo5" id="nombreEquipo5" placeholder="Equipo5..."[(ngModel)]="nombreEquipo5" >
+          <br> -->
+    </fieldset>
+
+    <button type="submit">Guardar</button>
+    <button (click)="salir()">Salir</button>
+  </form>
+</div>

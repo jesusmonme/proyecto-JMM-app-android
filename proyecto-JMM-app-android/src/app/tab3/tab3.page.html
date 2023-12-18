@@ -1,0 +1,73 @@
+<!-- <app-sortear-equipos *ngIf="modalSorteo" [equipo1]="equipo1" [equipo2]="equipo2" [idPenya]="id" [modalSorteo]="modalSorteo"></app-sortear-equipos> -->
+
+<div *ngIf="modalSorteo===false">
+  <header>
+    <div class="titulo-cabecera">Jugadores de Peña 1</div>
+    <div class="container-info-equipo">
+      <div>{{penya.nombreBD}}</div>
+      <!-- <div>{{jugadoresSeleccionados}} Jugadores de {{jugadores.length}}</div> -->
+    </div>
+  </header>
+
+  <section>
+    <div class="container-jugadores">
+      <div *ngFor="let jugador of jugadores; let i=index">
+        <div *ngIf="jugador.jugadorSeleccionado===false">
+          <div id="i" class="div-jugadores">
+            <!-- TODO cambiar metodo borrar jugador al icono borrar -->
+            <div class="foto-jugador">
+              <img
+                src="assets/persona.png"
+                color="red"
+                alt="Foto jug"
+                (mousedown)="seleccionarJugador(jugador.idJugador!)"
+              />
+            </div>
+            <div class="blanco">{{jugador.nombreJugador}}</div>
+            <div>Nivel :{{jugador.nivel}} Pos:{{jugador.posicion}}</div>
+            <!-- <img src="assets/edit2-icono.png" width="18px" class="icono-editar" alt="Editar" (mousedown)="editarJugador(jugador.idJugador,penya.idPenya)"> -->
+            <div class="botones-editar-borrar">
+              <a
+                (mousedown)="editarJugador(jugador.idJugador!,penya.idPenya!)"
+                class="editar"
+                >Editar</a
+              >
+              <!-- <img src="assets/borrar-icono.png" width="18px" class="icono-eliminar" alt="Borrar" (mousedown)="borrarJugador(jugador)"> -->
+              <a (mousedown)="borrarJugador(jugador)" class="eliminar">Borrar</a
+              ><br />
+              <!-- <span>Ultim: {{jugador.ultimoPartido}}  - Miem: {{jugador.miembro}} -  Rat:{{jugador.ratio}}</span> -->
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="jugador.jugadorSeleccionado">
+          <div class="div-jugadores div-jugador-seleccionado">
+            <!-- TODO cambiar metodo borrar jugador al icono borrar -->
+            <div class="foto-jugador">
+              <img
+                src="assets/persona-rellena.png"
+                alt="Foto jug"
+                (mousedown)="seleccionarJugador(jugador.idJugador!)"
+              />
+            </div>
+            <span class="blanco">{{jugador.nombreJugador}}</span><br />
+            <span>Nivel :{{jugador.nivel}} Pos:{{jugador.posicion}}</span><br />
+            <!-- <span>Ultim: {{jugador.ultimoPartido}}  - Miem: {{jugador.miembro}} -  Rat:{{jugador.ratio}}</span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-button">
+    <button class="boton-jugadores" (click)="crearJugadores()">
+      Crear Jugador
+    </button>
+    <button class="boton-sorteo" (click)="hacerEquipos(jugadoresConvocados)">
+      Sortear Equipos
+    </button>
+    <!-- <button class="boton-jugadores" (click)="salir()">Salir</button> -->
+  </footer>
+</div>
+<footer *ngIf="modalSorteo" class="footer-button">
+  <button class="boton-jugadores" (mousedown)="volver()">Volver</button>
+</footer>

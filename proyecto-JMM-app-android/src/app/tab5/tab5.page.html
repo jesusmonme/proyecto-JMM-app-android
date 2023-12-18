@@ -1,0 +1,39 @@
+<header>
+  <div class="titulo-cabecera">Equipos Sorteados</div>
+</header>
+<section class="equipos">
+  <div class="container-jugadores">
+    <div class="div-equipo">
+      <div>{{equipo1!.nombreEquipo!}}</div>
+    </div>
+    <div *ngFor="let jugador of equipo1.jugadores; let i=index">
+      <div id="i" class="div-jugadores">
+        <div class="foto-jugador">
+          <img src="assets/persona-rellena.png" alt="Foto jug" />
+        </div>
+        <span class="titulo-jugador">{{jugador.nombreJugador}}</span><br />
+        <span>Pos:{{jugador.posicion}}</span><br />
+        <span>Ratio:{{jugador.ratio}}</span><br />
+        <span>Ultim:{{jugador.ultimoPartido}}</span><br />
+        <span>Vic: ((%)) - Emp: ((%)) - Der: ((%))</span>
+      </div>
+    </div>
+  </div>
+  <div class="container-jugadores">
+    <div class="div-equipo">
+      <div>{{equipo2!.nombreEquipo!}}</div>
+    </div>
+    <div *ngFor="let jugador of equipo2.jugadores; let i=index">
+      <div id="i" class="div-jugadores">
+        <div class="foto-jugador">
+          <img src="assets/persona-rellena.png" alt="Foto jug" />
+        </div>
+        <span class="titulo-jugador">{{jugador.nombreJugador}}</span><br />
+        <span>Pos:{{jugador.posicion}}</span><br />
+        <span>Ratio:{{jugador.ratio}}</span><br />
+        <span>Ultim:{{jugador.ultimoPartido}}</span><br />
+        <span>Vic: ((%)) - Emp: ((%)) - Der: ((%))</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,167 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #023e8a;
+  z-index: 1;
+}
+.titulo-cabecera {
+  text-align: center;
+  color: white;
+  margin-top: 18px;
+  font-size: 1.5em;
+}
+.container-info-equipo {
+  display: flex;
+  font-size: small;
+  text-transform: uppercase;
+  position: relative;
+  top: 20px;
+  justify-content: space-around;
+  color: #022452;
+}
+
+.container-buttons {
+  display: flex;
+  position: relative;
+  top: 80px;
+  justify-content: space-evenly;
+}
+
+.container-buttons-button {
+  margin-right: 5px;
+  background-color: orange;
+  color: #fff;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #023e8a;
+  font-size: x-small;
+}
+.boton-sorteo {
+  background-color: #022452;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #023e8a;
+  font-weight: bolder;
+}
+.izda {
+  float: left;
+}
+.dcha {
+  float: right;
+}
+
+.container-jugadores {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  top: 95px;
+}
+
+.div-jugadores {
+  width: 175px;
+  background-color: #0e5cc2;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #023e8a;
+  font-size: x-small;
+  color: #022452;
+  height: 50px;
+  padding-top: 3px;
+}
+.blanco {
+  color: white;
+  text-transform: uppercase;
+}
+.div-jugadores:hover {
+  background-color: #0096c7;
+}
+.div-jugador-seleccionado {
+  background-color: green;
+}
+
+.foto-jugador {
+  width: 25%;
+  float: left;
+  margin: 2px 2px 0 2px;
+  cursor: pointer;
+}
+.foto-jugador img {
+  height: 37px;
+  margin-left: 2px;
+}
+
+.boton-jugadores {
+  background-color: #0096c7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #023e8a;
+  margin-right: 20px;
+}
+
+.footer-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 20px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 10px;
+}
+.footer button:active {
+  background-color: #023e8a;
+  color: aqua;
+}
+.editar {
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #11aa11;
+  padding: 2px;
+}
+.eliminar {
+  color: white;
+  text-transform: uppercase;
+  float: right;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #dd2727;
+  padding: 2px;
+}
+.icono-eliminar {
+  float: right;
+  color: white;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.icono-editar {
+  margin-left: 13px;
+  color: white;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.botones-editar-borrar {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}

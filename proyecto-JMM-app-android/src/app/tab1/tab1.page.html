@@ -1,0 +1,41 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content> -->
+
+<body>
+  <header>
+    <div class="titulo-cabecera">Listado de Peñas</div>
+  </header>
+  <main>
+    <div *ngFor="let penya of penyas; let i=index">
+      <div id="{{penyas![i].idPenya}}" (click)="irApenya()">
+        <!-- poner maximo caracteres nombre -->
+        <ion-card class="penya-card">
+          <ion-card-header>
+            <ion-card-title>{{penyas![i].nombreBD}}</ion-card-title>
+            <ion-card-subtitle></ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content> Modificado </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <button (click)="crearPena()">Crear Peña</button>
+  </footer>
+</body>
